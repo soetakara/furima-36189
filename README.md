@@ -31,8 +31,47 @@ Things you may want to cover:
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
 | nickname           | string | null: false               |
-| last_name          | text   | null: false               |
-| first_name         | text   | null: false               |
-| last_name_kana     | text   | null: false               |
-| first_name_kana    | text   | null: false               |
+| last_name          | string | null: false               |
+| first_name         | string | null: false               |
+| last_name_kana     | string | null: false               |
+| first_name_kana    | string | null: false               |
 | birthday           | string | null: false               |
+
+ - has_many :items
+ - has_many :orders
+
+<!-- itemsテーブル -->
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| title         | string     | null: false,                   |
+| category      | string     | null: false                    |
+| status        | string     | null: false                    |
+| fee           | string     | null: false                    |
+| area          | string     | null: false                    |
+| shipping_date | string     | null: false                    |
+| price         | string     | null: false                    |
+| user          | references | null: false, foreign_key: true |
+
+ - belongs_to :user
+ - has_one :order
+
+<!-- ordersテーブル -->
+| Column           | Type       | Options                        |
+| -----------------| ---------- | ------------------------------ |
+| postal_code      | text       | null: false,                   |
+| prefectures      | text       | null: false,                   |
+| municipalities   | text       | null: false,                   |
+| address          | text       | null: false,                   |
+| building_name    | text       | null: false,                   |
+| telephone_number | text       | null: false,                   |
+| credit_code      | text       | null: false,                   |
+| security_code    | text       | null: false,                   |
+| credit_deadline  | text       | null: false,                   |
+| user             | references | null: false, foreign_key: true |
+| title            | references | null: false, foreign_key: true |
+| image            | references | null: false, foreign_key: true |
+| fee              | references | null: false, foreign_key: true |
+| status           | references | null: false, foreign_key: true |
+
+ - belongs_to :user
+ - belongs_to :item
