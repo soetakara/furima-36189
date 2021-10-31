@@ -71,7 +71,7 @@ Things you may want to cover:
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
 | postal_code      | string     | null: false, foreign_key: true |
-| prefecture_id   　| integer    | null: false, foreign_key: true |
+| prefecture_id    | integer    | null: false, foreign_key: true |
 | municipalities   | string     | null: false, foreign_key: true |
 | house_number     | string     | null: false, foreign_key: true |
 | building_name    | string     | foreign_key: true              |
