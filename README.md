@@ -41,16 +41,16 @@ Things you may want to cover:
  - has_many :orders
 
 <!-- itemsテーブル -->
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| category      | string     | null: false                    |
-| status        | string     | null: false                    |
-| fee           | string     | null: false                    |
-| area          | string     | null: false                    |
-| shipping_date | string     | null: false                    |
-| price         | string     | null: false                    |
-| user          | references | null: false, foreign_key: true |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| category_id      | integer    | null: false                    |
+| status_id        | integer    | null: false                    |
+| fee_id           | integer    | null: false                    |
+| area_id          | integer    | null: false                    |
+| shipping_date_id | integer    | null: false                    |
+| price            | string     | null: false                    |
+| user             | references | null: false, foreign_key: true |
 
  - belongs_to :user
  - has_one :order
