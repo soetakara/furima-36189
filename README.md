@@ -61,7 +61,7 @@ Things you may want to cover:
 | postal_code      | references | null: false, foreign_key: true |
 | prefectures      | references | null: false, foreign_key: true |
 | municipalities   | references | null: false, foreign_key: true |
-| address          | references | null: false, foreign_key: true |
+| house_number     | references | null: false, foreign_key: true |
 | building_name    | references | foreign_key: true              |
 | telephone_number | references | null: false, foreign_key: true |
 | user             | references | null: false, foreign_key: true |
@@ -80,7 +80,7 @@ Things you may want to cover:
 | postal_code      | string     | null: false,                   |
 | prefectures_id   | integer    | null: false,                   |
 | municipalities   | string     | null: false,                   |
-| address          | string     | null: false,                   |
+| house_number     | string     | null: false,                   |
 | building_name    | string     |                                |
 | telephone_number | string     | null: false,                   |
 
