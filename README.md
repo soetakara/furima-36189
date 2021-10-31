@@ -59,17 +59,9 @@ Things you may want to cover:
 <!-- ordersテーブル -->
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| postal_code      | references | null: false, foreign_key: true |
-| prefectures      | references | null: false, foreign_key: true |
-| municipalities   | references | null: false, foreign_key: true |
-| house_number     | references | null: false, foreign_key: true |
-| building_name    | references | foreign_key: true              |
-| telephone_number | references | null: false, foreign_key: true |
 | user             | references | null: false, foreign_key: true |
-| title            | references | null: false, foreign_key: true |
-| image            | references | null: false, foreign_key: true |
-| fee              | references | null: false, foreign_key: true |
-| status           | references | null: false, foreign_key: true |
+| item             | references | null: false, foreign_key: true |
+| address          | references | null: false, foreign_key: true |
 
  - belongs_to :user
  - belongs_to :item
