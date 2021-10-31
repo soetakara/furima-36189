@@ -47,7 +47,7 @@ Things you may want to cover:
 | category_id      | integer    | null: false                    |
 | status_id        | integer    | null: false                    |
 | fee_id           | integer    | null: false                    |
-| prefectures_id   | integer    | null: false                    |
+| prefecture_id    | integer    | null: false                    |
 | shipping_date_id | integer    | null: false                    |
 | price            | integer    | null: false                    |
 | explanation      | text       | null: false                    |
@@ -71,7 +71,7 @@ Things you may want to cover:
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
 | postal_code      | string     | null: false, foreign_key: true |
-| prefectures_id   | integer    | null: false, foreign_key: true |
+| prefecture_id   　| integer    | null: false, foreign_key: true |
 | municipalities   | string     | null: false, foreign_key: true |
 | house_number     | string     | null: false, foreign_key: true |
 | building_name    | string     | foreign_key: true              |
