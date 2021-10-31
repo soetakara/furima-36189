@@ -85,7 +85,7 @@ Things you may want to cover:
 | municipalities   | string     | null: false,                   |
 | address          | string     | null: false,                   |
 | building_name    | string     |                                |
-| telephone_number | text       | null: false,                   |
+| telephone_number | string     | null: false,                   |
 | credit_code      | text       | null: false,                   |
 | security_code    | text       | null: false,                   |
 | credit_deadline  | text       | null: false,                   |
