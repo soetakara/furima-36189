@@ -81,7 +81,7 @@ Things you may want to cover:
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
 | postal_code      | string     | null: false,                   |
-| prefectures      | text       | null: false,                   |
+| prefectures_id   | integer    | null: false,                   |
 | municipalities   | text       | null: false,                   |
 | address          | text       | null: false,                   |
 | building_name    | text       | null: false,                   |
