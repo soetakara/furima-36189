@@ -47,7 +47,7 @@ Things you may want to cover:
 | category_id      | integer    | null: false                    |
 | status_id        | integer    | null: false                    |
 | fee_id           | integer    | null: false                    |
-| area_id          | integer    | null: false                    |
+| prefectures_id   | integer    | null: false                    |
 | shipping_date_id | integer    | null: false                    |
 | price            | string     | null: false                    |
 | user             | references | null: false, foreign_key: true |
