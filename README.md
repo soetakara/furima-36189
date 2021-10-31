@@ -69,11 +69,12 @@ Things you may want to cover:
 <!-- addressesテーブル -->
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| postal_code      | string     | null: false, foreign_key: true |
-| prefecture_id    | integer    | null: false, foreign_key: true |
-| municipalities   | string     | null: false, foreign_key: true |
-| house_number     | string     | null: false, foreign_key: true |
-| building_name    | string     | foreign_key: true              |
-| telephone_number | string     | null: false, foreign_key: true |
+| postal_code      | string     | null: false                    |
+| prefecture_id    | integer    | null: false                    |
+| municipalities   | string     | null: false                    |
+| house_number     | string     | null: false                    |
+| building_name    | string     |                                |
+| telephone_number | string     | null: false                    |
+| order            | references | null: false, foreign_key: true |
 
  - belongs_to :order
