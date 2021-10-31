@@ -80,7 +80,7 @@ Things you may want to cover:
 <!-- addressesテーブル -->
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| postal_code      | text       | null: false,                   |
+| postal_code      | string     | null: false,                   |
 | prefectures      | text       | null: false,                   |
 | municipalities   | text       | null: false,                   |
 | address          | text       | null: false,                   |
