@@ -64,9 +64,6 @@ Things you may want to cover:
 | address          | references | null: false, foreign_key: true |
 | building_name    | references | foreign_key: true              |
 | telephone_number | references | null: false, foreign_key: true |
-| credit_code      | references | null: false, foreign_key: true |
-| security_code    | references | null: false, foreign_key: true |
-| credit_deadline  | references | null: false, foreign_key: true |
 | user             | references | null: false, foreign_key: true |
 | title            | references | null: false, foreign_key: true |
 | image            | references | null: false, foreign_key: true |
@@ -86,8 +83,5 @@ Things you may want to cover:
 | address          | string     | null: false,                   |
 | building_name    | string     |                                |
 | telephone_number | string     | null: false,                   |
-| credit_code      | text       | null: false,                   |
-| security_code    | text       | null: false,                   |
-| credit_deadline  | text       | null: false,                   |
 
  - belongs_to :order
