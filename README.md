@@ -61,7 +61,6 @@ Things you may want to cover:
 | -----------------| ---------- | ------------------------------ |
 | user             | references | null: false, foreign_key: true |
 | item             | references | null: false, foreign_key: true |
-| address          | references | null: false,                   |
 
  - belongs_to :user
  - belongs_to :item
