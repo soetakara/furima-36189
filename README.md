@@ -58,15 +58,15 @@ Things you may want to cover:
 <!-- ordersテーブル -->
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| postal_code      | text       | null: false, foreign_key: true |
-| prefectures      | text       | null: false, foreign_key: true |
-| municipalities   | text       | null: false, foreign_key: true |
-| address          | text       | null: false, foreign_key: true |
-| building_name    | text       | null: false, foreign_key: true |
-| telephone_number | text       | null: false, foreign_key: true |
-| credit_code      | text       | null: false, foreign_key: true |
-| security_code    | text       | null: false, foreign_key: true |
-| credit_deadline  | text       | null: false, foreign_key: true |
+| postal_code      | references | null: false, foreign_key: true |
+| prefectures      | references | null: false, foreign_key: true |
+| municipalities   | references | null: false, foreign_key: true |
+| address          | references | null: false, foreign_key: true |
+| building_name    | references | null: false, foreign_key: true |
+| telephone_number | references | null: false, foreign_key: true |
+| credit_code      | references | null: false, foreign_key: true |
+| security_code    | references | null: false, foreign_key: true |
+| credit_deadline  | references | null: false, foreign_key: true |
 | user             | references | null: false, foreign_key: true |
 | title            | references | null: false, foreign_key: true |
 | image            | references | null: false, foreign_key: true |
