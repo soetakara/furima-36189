@@ -43,7 +43,7 @@ Things you may want to cover:
 <!-- itemsテーブル -->
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false,                   |
+| title         | string     | null: false                    |
 | category      | string     | null: false                    |
 | status        | string     | null: false                    |
 | fee           | string     | null: false                    |
