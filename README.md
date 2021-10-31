@@ -50,6 +50,7 @@ Things you may want to cover:
 | prefectures_id   | integer    | null: false                    |
 | shipping_date_id | integer    | null: false                    |
 | price            | integer    | null: false                    |
+| explanation      | text       | null: false                    |
 | user             | references | null: false, foreign_key: true |
 
  - belongs_to :user
