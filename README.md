@@ -61,7 +61,7 @@ Things you may want to cover:
 | -----------------| ---------- | ------------------------------ |
 | user             | references | null: false, foreign_key: true |
 | item             | references | null: false, foreign_key: true |
-| address          | references | null: false, foreign_key: true |
+| address          | references | null: false,                   |
 
  - belongs_to :user
  - belongs_to :item
@@ -70,11 +70,11 @@ Things you may want to cover:
 <!-- addressesテーブル -->
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| postal_code      | string     | null: false,                   |
-| prefectures_id   | integer    | null: false,                   |
-| municipalities   | string     | null: false,                   |
-| house_number     | string     | null: false,                   |
-| building_name    | string     |                                |
-| telephone_number | string     | null: false,                   |
+| postal_code      | string     | null: false, foreign_key: true |
+| prefectures_id   | integer    | null: false, foreign_key: true |
+| municipalities   | string     | null: false, foreign_key: true |
+| house_number     | string     | null: false, foreign_key: true |
+| building_name    | string     | foreign_key: true              |
+| telephone_number | string     | null: false, foreign_key: true |
 
  - belongs_to :order
