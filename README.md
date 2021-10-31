@@ -49,7 +49,7 @@ Things you may want to cover:
 | fee_id           | integer    | null: false                    |
 | prefectures_id   | integer    | null: false                    |
 | shipping_date_id | integer    | null: false                    |
-| price            | string     | null: false                    |
+| price            | integer    | null: false                    |
 | user             | references | null: false, foreign_key: true |
 
  - belongs_to :user
