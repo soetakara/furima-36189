@@ -3,9 +3,6 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
-    password = "#{@user.password}A1"
-    @user.password = password
-    @user.password_confirmation = password
   end
 
   describe 'ユーザー新規登録' do
@@ -24,7 +21,7 @@ RSpec.describe User, type: :model do
       end
       it '同じemailを入力すると登録できない' do
         @user.save
-        another_user = FactoryBot.build(:user, email: @user.email, password: @user.password, password_confirmation: @user.password)
+        another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
         expect(another_user.errors.full_messages).to include("Email has already been taken")
       end
