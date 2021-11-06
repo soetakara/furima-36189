@@ -9,7 +9,10 @@ class Item < ApplicationRecord
   validates :price,            presence: true
   validates :explantion,       presence: true
 
+  validates :image,            presence: true
+
   ##アソシエーションの設定
   belongs_to :user
+  has_one_attached :image
   
 end
