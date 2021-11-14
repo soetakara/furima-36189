@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :sign_in_check, only: [:new]
-  before_action :preset_item, only: [:show, :edit]
+  before_action :preset_item, only: [:show, :edit, :update]
 
   def index
     @items = Item.includes(:user).order("created_at DESC")
@@ -23,6 +23,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
   end
 
   private
