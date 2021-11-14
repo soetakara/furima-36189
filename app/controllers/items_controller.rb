@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :sign_in_check, only: [:new]
-  before_action :preset_item, only: [:show]
+  before_action :preset_item, only: [:show, :edit]
 
   def index
     @items = Item.includes(:user).order("created_at DESC")
