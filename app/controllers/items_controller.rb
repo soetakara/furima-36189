@@ -34,6 +34,9 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   private
   def sign_in_item_check
     preset_item
