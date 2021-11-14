@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :sign_in_check, only: [:new]
-  before_action :sign_in_item_check, only: [:edit, :update]
   before_action :preset_item, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :edit, :update]
+  before_action :sign_in_item_check, only: [:edit, :update]
 
   def index
     @items = Item.includes(:user).order("created_at DESC")
@@ -35,20 +35,11 @@ class ItemsController < ApplicationController
   end
 
   private
-  def sign_in_check
-    if user_signed_in?
-    else
-      redirect_to new_user_session_path
-    end
-  end
-  
   def sign_in_item_check
     preset_item
     if user_signed_in? && current_user.id == @item.user.id
-    elsif user_signed_in? && current_user.id != @item.user.id
-      redirect_to root_path
     else
-      redirect_to new_user_session_path
+      redirect_to root_path
     end
   end
 
