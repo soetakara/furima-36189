@@ -22,6 +22,9 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   private
   def sign_in_check
     if user_signed_in?
