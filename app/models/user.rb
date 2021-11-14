@@ -18,5 +18,6 @@ class User < ApplicationRecord
 
   ##アソシエーションの設定
   has_many :items
+  has_many :orders
 
 end
