@@ -21,6 +21,10 @@ class OrdersController < ApplicationController
     params.require(:order).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
 
+  def address_params
+    params.permit(:postal_code, :prefecture_id, :municipality, :house_number, :building_name, :telephone_number).merge(order_id: @order.id)
+  end
+
   def pay_item
     Payjp.api_key = "sk_test_7fe5f160d1873c77b83696a8"
     Payjp::Charge.create(
