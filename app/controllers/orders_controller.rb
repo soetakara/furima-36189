@@ -8,8 +8,9 @@ class OrdersController < ApplicationController
     binding.pry
     @order = Order.new(order_params)
     if @order.valid?
-      pay_item
+      # pay_item
       @order.save
+      Address.create(address_params)
       return redirect_to root_path
     else
       render 'index'
@@ -18,11 +19,11 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
+    params.require(:order).permit().merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
 
   def address_params
-    params.permit(:postal_code, :prefecture_id, :municipality, :house_number, :building_name, :telephone_number).merge(order_id: @order.id)
+    params.require(:order).permit(:postal_code, :prefecture_id, :municipality, :house_number, :building_name, :telephone_number).merge(order_id: @order.id)
   end
 
   def pay_item
