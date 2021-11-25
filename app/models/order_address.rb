@@ -8,7 +8,7 @@ class OrderAddress
   validates :municipality,     presence: true
   validates :house_number,     presence: true
   validate  :building_name
-  validates :telephone_number, presence: true, format: {with: /\A[0-9]+\z/, greater_than_or_equal_to: 10, less_than_or_equal_to: 11}
+  validates :telephone_number, presence: true, format: {with: /\A[0-9]+\z/, message: " is invalid. Input only number"}, length: { minimum: 10, maximum: 11 }
 
   ##orderのバリデーション
   validates :token,   presence: true
