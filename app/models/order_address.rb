@@ -1,5 +1,5 @@
 class OrderAddress
-  inculde ActiveModel::Model
+  include ActiveModel::Model
   attr_accessor :postal_code, :prefecture_id, :municipality, :house_number, :building_name, :telephone_number, :user_id, :item_id, :token
 
   ##addressのバリデーション
