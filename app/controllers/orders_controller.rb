@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
   def create
     @order_address = OrderAddress.new(order_address_params)
     if @order_address.valid?
-      # pay_item
+      pay_item
       @order_address.save
       return redirect_to root_path
     else
@@ -23,8 +23,8 @@ class OrdersController < ApplicationController
   def pay_item
     Payjp.api_key = "sk_test_7fe5f160d1873c77b83696a8"
     Payjp::Charge.create(
-      amount: order_params[:price],
-      card: order_params[:token],
+      amount: @item.price,
+      card: order_address_params[:token],
       currency: 'jpy' 
     )
   end
