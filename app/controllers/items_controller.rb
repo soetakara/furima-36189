@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :preset_item, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update]
   before_action :sign_in_item_check, only: [:edit, :update, :destroy]
+  before_action :sign_in_not_seller_check, only: [:edit, :update, :destroy]
 
   def index
     @items = Item.includes(:user).order("created_at DESC")
@@ -44,6 +45,12 @@ class ItemsController < ApplicationController
     preset_item
     if user_signed_in? && current_user.id == @item.user.id
     else
+      redirect_to root_path
+    end
+  end
+
+  def sign_in_not_seller_check
+    unless @item.order.nil?
       redirect_to root_path
     end
   end
