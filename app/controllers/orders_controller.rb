@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
   before_action :set_item
+  before_action :authenticate_user!
+  before_action :sign_in_seller_check
+  before_action :sign_in_not_seller_check
 
   def index
     @order_address = OrderAddress.new
@@ -19,6 +22,18 @@ class OrdersController < ApplicationController
   private
   def set_item
     @item = Item.find(params[:item_id])
+  end
+
+  def sign_in_seller_check
+    if current_user.id == @item.user.id
+      redirect_to root_path
+    end
+  end
+
+  def sign_in_not_seller_check
+    unless @item.order.nil?
+      redirect_to root_path
+    end
   end
 
   def order_address_params
